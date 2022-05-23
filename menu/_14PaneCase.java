@@ -18,11 +18,10 @@ import javafx.stage.Stage;
 
 public class _14PaneCase extends Application{
 	 ShowImage a111 = new ShowImage();
-	 main eee =new main();
-	@Override
+	
 	public void start(Stage primaryStage) throws Exception {
 		
-		Scene scene = new Scene(a111.pane);
+		Scene scene = new Scene(a111.root);
 		primaryStage.setTitle("ShowPaneCase");
 		primaryStage.setScene(scene);
 		primaryStage.show();

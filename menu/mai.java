@@ -289,7 +289,7 @@ public class mai extends Application {
 	    Label font21111 = new Label("2级.干锅手撕菜----材料：大白菜2份                 \r\n\n"
 	    		);
 	    pane1111.getChildren().addAll(font21111,a);
-	    Button bbb=new Button("                                                                               已经点了     " +s+"                                                                 去结算           ");
+	    Button bbb=new Button("                                                                               已经点了     " +hj+"                                                                 去结算           ");
 	    bbb.setStyle(
 	            "-fx-background-color:yellow;"+         //设置背景颜色
 	                    "-fx-background-radius:20;"+     //设置背景圆角

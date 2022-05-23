@@ -36,11 +36,13 @@ public class ShowImage extends Application {
   public int s,s1=0;
   private int a1=0;
   public int gg,ff,hj=0;
-  private ComboBox<String> cbo = new ComboBox<>();
+ public ComboBox<String> cbo = new ComboBox<>();
   public Pane pane = new VBox(10);
   private String[] flagTitles = {"主食", "小吃", "饮料",
 		    "汤","公告"};
-
+    Pane pan = new FlowPane();  Label f = new Label("干锅手撕菜");
+  VBox rr=new VBox(f,pan);
+  HBox root = new HBox(cbo,pane,pan);
   public  void start(Stage primaryStage) throws Exception{
 	
   
@@ -66,7 +68,6 @@ public class ShowImage extends Application {
     imageView4.setFitWidth(100);
     pane.getChildren().add(imageView4);  
  
-    Pane pan = new FlowPane();
     Label font1 = new Label("2级.干锅手撕菜----材料：大白菜2份\r\n"
     		+ "3级.板栗烧菜心--材料：大白菜1份，栗子1份\r\n"
     		+ "4级.剁椒炒鸡蛋--材料：鸡蛋1份，辣椒2份\r\n"
@@ -91,12 +92,9 @@ public class ShowImage extends Application {
   
      pan.getChildren().addAll(font1,b1,label,b); 
      Pane p=new Pane(); 
-     Label f = new Label("干锅手撕菜");
+   
   p.getChildren().add(f);
-  VBox rr=new VBox(f,pan);
-  
-
-    HBox root = new HBox(cbo,pane,pan);
+ 
     
     
     Pane pane2 = new FlowPane();
