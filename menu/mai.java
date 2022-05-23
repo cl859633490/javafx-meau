@@ -260,6 +260,13 @@ public class mai extends Application {
 	    pane6.getChildren().addAll(font2111,b8,label3,b7);
 
 	    Button a=new Button("ºÏ¼Æ"); 
+	    a.setStyle(
+	            "-fx-background-color:yellow;"+         //ÉèÖÃ±³¾°ÑÕÉ«
+	                    "-fx-background-radius:20;"+     //ÉèÖÃ±³¾°Ô²½Ç
+	                    "-fx-text-fill:#4d0092;"+        //ÉèÖÃ×ÖÌåÑÕÉ«
+	                    "-fx-border-radius:5;"      //ÉèÖÃ±ß¿òÔ²½Ç
+	                  
+	    );
 	    a.setOnAction((ActionEvent e) -> { 
 	    	hj=s*85+gg*34+ff*23+a1*12;
 	    	pane1.setPadding(new Insets(1, 1, 1, 2));
