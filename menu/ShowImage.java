@@ -42,7 +42,7 @@ public class ShowImage extends Application {
 		    "汤","公告"};
     Pane pan = new FlowPane();  Label f = new Label("干锅手撕菜");
   VBox rr=new VBox(f,pan);
-  HBox root = new HBox(cbo,pane,pan);
+  HBox root = new HBox(pane,pan);
   public  void start(Stage primaryStage) throws Exception{
 	
   

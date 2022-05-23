@@ -25,7 +25,7 @@ public class Launch extends Application{
 	/**
 	 * @param args
 	 */
-	private static Label infoLb;
+	private static Label infoLb; ShowImage a111 = new ShowImage();
 	public static void showInfo(String info) {
 		Platform.runLater(()->infoLb.setText(info));
 	}
@@ -43,8 +43,14 @@ public class Launch extends Application{
 	}
 	public class Home extends Stage{
 		public Home() throws IOException {
+			
+			Scene scene = new Scene(a111.rr, 342.0, 575.0);
 		
-		}
+		
+			setScene(scene);
+			setResizable(false);
+			setTitle("Ordering");
+				}
 	}
 	@Override
 	public void start(Stage primaryStage) {
