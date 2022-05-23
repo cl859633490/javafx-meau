@@ -30,9 +30,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 public class ShowImage extends Application {
-  public class start {
-
-	}
+  
   public int s,s1=0;
   private int a1=0;
   public int gg,ff,hj=0;

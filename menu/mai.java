@@ -297,7 +297,24 @@ public class mai extends Application {
 	                    "-fx-border-radius:5;"      //设置边框圆角
 	                  
 	    );
-	    
+	    bbb.setOnAction((ActionEvent e) -> { 
+	    	hj=s*85+gg*34+ff*23+a1*12;
+	    	pane1.setPadding(new Insets(1, 1, 1, 2));
+	        Label fonnn = new Label("已点");
+	        fonnn.setFont(Font.font("Times New Roman",
+	          		 FontWeight.BOLD, FontPosture.ITALIC, 40));
+	        Label fon = new Label("\n  一共: "+hj+" $          ");
+	        fon.setFont(Font.font("Times New Roman",
+	       		 FontWeight.BOLD, FontPosture.ITALIC, 75));
+	        ImageView image3 = new ImageView("image/666.jpg");
+	        image3.setFitHeight(300);
+	        image3.setFitWidth(300);
+	        pane1.getChildren().addAll(image3,fonnn,fon); 
+	        	 Scene scene = new Scene(pane1);
+	        	    primaryStage.setTitle("支付界面"); // Set the stage title
+	        	    primaryStage.setScene(scene);
+	        	primaryStage.show();
+    	});
 
     ListView<String> lv = new ListView<>
       (FXCollections.observableArrayList(flagTitles));
