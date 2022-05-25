@@ -98,9 +98,10 @@ public class ShowImage extends Application {
     Pane pane2 = new FlowPane();
     Text label1 = new Text("0");
     ImageView image11= new ImageView("image/3.jpg");
-    image11.setFitHeight(10);
-    image11.setFitWidth(10);
-    Button b3=new Button("+",image11);
+    
+    image11.setFitWidth(100);
+    Button b3=new Button("+",image11);b3.setPrefHeight(50);
+    b3.setPrefWidth(50);
   b3.setStyle(
             "-fx-background-color:#FF0030;"+         //…Ë÷√±≥æ∞—’…´
                     "-fx-background-radius:20;"+     //…Ë÷√±≥æ∞‘≤Ω«

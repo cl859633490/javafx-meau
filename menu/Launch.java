@@ -262,7 +262,7 @@ public class Launch extends Application{
 		         label3.setText(label3.getText() + ff);
 		    	});
 		    
-		    Button b7=new Button("+");
+		    Button b7=new Button("",new ImageView("image/home.jpg"));
 		    b7.setStyle(
 		            "-fx-background-color:orange;"+         //设置背景颜色
 		                    "-fx-background-radius:20;"+     //设置背景圆角
@@ -315,7 +315,7 @@ public class Launch extends Application{
 		    Label font21111 = new Label("2级.干锅手撕菜----材料：大白菜2份                 \r\n\n"
 		    		);
 		    pane1111.getChildren().addAll(font21111,a);
-		    Button bbb=new Button("                                                            已经点了     " +hj+"                                                                 去结算           ");
+		    Button bbb=new Button("                     已经点了     " +hj+"                                                                            去结算           ");
 		    bbb.setOnAction((ActionEvent e) -> { 
 		    	
 		    	});
@@ -331,7 +331,7 @@ public class Launch extends Application{
 
 	    ListView<String> lv = new ListView<>
 	      (FXCollections.observableArrayList(flagTitles));
-	    lv.setPrefSize(200, 200);
+	    lv.setPrefSize(100, 200);
 	    lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	    Pane im = new Pane();
 	    im.setPadding(new Insets(10, 100, 10, 10));
@@ -351,7 +351,7 @@ public class Launch extends Application{
 	    });
 
 	    // Create a scene and place it in the stage
-	    Scene scene = new Scene(panep, 742.0, 575.0);
+	    Scene scene = new Scene(panep, 642.0, 575.0);
 		
 			setScene(scene);
 			setResizable(false);
