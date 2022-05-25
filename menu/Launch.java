@@ -1,4 +1,4 @@
-package menu;
+package mm.menu;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -262,7 +262,7 @@ public class Launch extends Application{
 		         label3.setText(label3.getText() + ff);
 		    	});
 		    
-		    Button b7=new Button("",new ImageView("image/home.jpg"));
+		    Button b7=new Button("+");
 		    b7.setStyle(
 		            "-fx-background-color:orange;"+         //设置背景颜色
 		                    "-fx-background-radius:20;"+     //设置背景圆角
@@ -329,26 +329,58 @@ public class Launch extends Application{
 		    );
 		    
 
-	    ListView<String> lv = new ListView<>
-	      (FXCollections.observableArrayList(flagTitles));
-	    lv.setPrefSize(100, 200);
-	    lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-	    Pane im = new Pane();
-	    im.setPadding(new Insets(10, 100, 10, 10));
-	    BorderPane panep = new BorderPane();
-	    panep.setPadding(new Insets(10, 100, 10, 10));
-	    panep.setLeft(new ScrollPane(lv));   
-	    panep.setBottom(bbb);
-	    panep.setCenter(new ScrollPane(im));
-	   
-	    lv.getSelectionModel().selectedItemProperty().addListener(
-	      ov -> {  
-	        im.getChildren().clear();
-	        
-	        for (Integer i: lv.getSelectionModel().getSelectedIndices()) {
-	          im.getChildren().addAll(I[i]);
-	        }
-	    });
+		    ListView<String> lv = new ListView<>
+		      (FXCollections.observableArrayList(flagTitles));
+		    lv.setPrefSize(100, 200);
+		    lv.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+		    Pane im = new Pane();
+		    im.setPadding(new Insets(10, 100, 10, 10));
+		    BorderPane panep = new BorderPane();
+		    panep.setPadding(new Insets(10, 100, 10, 10));
+		    panep.setLeft(new ScrollPane(lv));   
+		    ImageView imagee = new ImageView("image/home.jpg");
+		    Button a666=new Button(" ",imagee); 
+		    a666.setStyle(
+		            "-fx-background-color:white;"+         //设置背景颜色
+		                    "-fx-background-radius:20;"+     //设置背景圆角
+		                    "-fx-text-fill:#4d0092;"+        //设置字体颜色
+		                    "-fx-border-radius:5;"      //设置边框圆角
+		                  
+		    );
+		    a666.setOnAction((ActionEvent e) -> { 
+		    	hj=s*85+gg*34+ff*23+a1*12;
+		    	pane1.setPadding(new Insets(1, 1, 1, 2));
+		        Label fonnn = new Label("已点");
+		        fonnn.setFont(Font.font("Times New Roman",
+		          		 FontWeight.BOLD, FontPosture.ITALIC, 40));
+		        Label fon = new Label("\n  一共: "+hj+" $          ");
+		        fon.setFont(Font.font("Times New Roman",
+		       		 FontWeight.BOLD, FontPosture.ITALIC, 75));
+		        ImageView image3 = new ImageView("image/666.jpg");
+		        image3.setFitHeight(300);
+		        image3.setFitWidth(300);
+		        pane1.getChildren().addAll(image3,fonnn,fon); 
+		        	 Scene scene = new Scene(pane1);
+		        	    Stage primaryStage = null;
+						primaryStage.setTitle("支付界面"); // Set the stage title
+		        	    primaryStage.setScene(scene);
+		        	primaryStage.show();
+			});
+		    imagee.setFitHeight(100);
+		    imagee.setFitWidth(100);
+		    VBox rrr=new VBox(bbb,a666);
+		    
+		    panep.setBottom(rrr);
+		    panep.setCenter(new ScrollPane(im));
+		   
+		    lv.getSelectionModel().selectedItemProperty().addListener(
+		      ov -> {  
+		        im.getChildren().clear();
+		        
+		        for (Integer i: lv.getSelectionModel().getSelectedIndices()) {
+		          im.getChildren().addAll(I[i]);
+		        }
+		    });
 
 	    // Create a scene and place it in the stage
 	    Scene scene = new Scene(panep, 642.0, 575.0);
